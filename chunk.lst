@@ -1,0 +1,148 @@
+; source chunk: luac.out
+
+; function [0] definition (level 1) 0
+; 1 upvalues, 0 params, is_vararg = 1, 9 stacks
+.function  1 0 1 9
+.upvalue  "_ENV"  1  0  ; 0  instack=1  idx=0
+.const  "print"  ; 0
+.const  "lua begin"  ; 1
+.const  "t"  ; 2
+.const  1  ; 3
+.const  2  ; 4
+.const  3  ; 5
+.const  4  ; 6
+.const  5  ; 7
+.const  6  ; 8
+.const  7  ; 9
+.const  8  ; 10
+.const  "a"  ; 11
+.const  "b"  ; 12
+.const  "c"  ; 13
+.const  "d"  ; 14
+.const  "e"  ; 15
+.const  nil  ; 16
+.const  9  ; 17
+.const  12  ; 18
+.const  "lua end"  ; 19
+[01] gettabup  0   0   256  ; R0 := U0(=_ENV)[K0(="print")]
+[02] loadk     1   1        ; R1 := K1(="lua begin")
+[03] call      0   2   1    ;  := R0(R1)
+[04] newtable  0   8   0    ; R0 := {} , array_size=8, hash_size=0
+[05] loadk     1   3        ; R1 := K3(=1)
+[06] loadk     2   4        ; R2 := K4(=2)
+[07] loadk     3   5        ; R3 := K5(=3)
+[08] loadk     4   6        ; R4 := K6(=4)
+[09] loadk     5   7        ; R5 := K7(=5)
+[10] loadk     6   8        ; R6 := K8(=6)
+[11] loadk     7   9        ; R7 := K9(=7)
+[12] loadk     8   10       ; R8 := K10(=8)
+[13] setlist   0   8   1    ; R0[1 to 8] := R1 to R8
+[14] settabup  0   258 0    ; U0(=_ENV)[K2(="t")] := R0
+[15] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[16] settable  0   267 259  ; R0[K11(="a")] := K3(=1)
+[17] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[18] settable  0   268 259  ; R0[K12(="b")] := K3(=1)
+[19] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[20] settable  0   269 259  ; R0[K13(="c")] := K3(=1)
+[21] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[22] settable  0   270 259  ; R0[K14(="d")] := K3(=1)
+[23] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[24] settable  0   271 259  ; R0[K15(="e")] := K3(=1)
+[25] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[26] settable  0   267 272  ; R0[K11(="a")] := K16(=nil)
+[27] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[28] settable  0   268 272  ; R0[K12(="b")] := K16(=nil)
+[29] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[30] settable  0   269 272  ; R0[K13(="c")] := K16(=nil)
+[31] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[32] settable  0   270 272  ; R0[K14(="d")] := K16(=nil)
+[33] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[34] settable  0   271 272  ; R0[K15(="e")] := K16(=nil)
+[35] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[36] settable  0   273 273  ; R0[K17(=9)] := K17(=9)
+[37] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[38] settable  0   274 274  ; R0[K18(=12)] := K18(=12)
+[39] gettabup  0   0   256  ; R0 := U0(=_ENV)[K0(="print")]
+[40] gettabup  1   0   258  ; R1 := U0(=_ENV)[K2(="t")]
+[41] len       1   1        ; R1 := # R1
+[42] call      0   2   1    ;  := R0(R1)
+[43] gettabup  0   0   256  ; R0 := U0(=_ENV)[K0(="print")]
+[44] loadk     1   19       ; R1 := K19(="lua end")
+[45] call      0   2   1    ;  := R0(R1)
+[46] return    0   1        ; return 
+; end of function 0
+
+; source chunk: test.lua
+
+; function [0] definition (level 1) 0
+; 1 upvalues, 0 params, is_vararg = 1, 9 stacks
+.function  1 0 1 9
+.upvalue  "_ENV"  1  0  ; 0  instack=1  idx=0
+.const  "print"  ; 0
+.const  "lua begin"  ; 1
+.const  "t"  ; 2
+.const  1  ; 3
+.const  2  ; 4
+.const  3  ; 5
+.const  4  ; 6
+.const  5  ; 7
+.const  6  ; 8
+.const  7  ; 9
+.const  8  ; 10
+.const  "a"  ; 11
+.const  "b"  ; 12
+.const  "c"  ; 13
+.const  "d"  ; 14
+.const  "e"  ; 15
+.const  nil  ; 16
+.const  9  ; 17
+.const  12  ; 18
+.const  "lua end"  ; 19
+[01] gettabup  0   0   256  ; R0 := U0(=_ENV)[K0(="print")]
+[02] loadk     1   1        ; R1 := K1(="lua begin")
+[03] call      0   2   1    ;  := R0(R1)
+[04] newtable  0   8   0    ; R0 := {} , array_size=8, hash_size=0
+[05] loadk     1   3        ; R1 := K3(=1)
+[06] loadk     2   4        ; R2 := K4(=2)
+[07] loadk     3   5        ; R3 := K5(=3)
+[08] loadk     4   6        ; R4 := K6(=4)
+[09] loadk     5   7        ; R5 := K7(=5)
+[10] loadk     6   8        ; R6 := K8(=6)
+[11] loadk     7   9        ; R7 := K9(=7)
+[12] loadk     8   10       ; R8 := K10(=8)
+[13] setlist   0   8   1    ; R0[1 to 8] := R1 to R8
+[14] settabup  0   258 0    ; U0(=_ENV)[K2(="t")] := R0
+[15] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[16] settable  0   267 259  ; R0[K11(="a")] := K3(=1)
+[17] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[18] settable  0   268 259  ; R0[K12(="b")] := K3(=1)
+[19] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[20] settable  0   269 259  ; R0[K13(="c")] := K3(=1)
+[21] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[22] settable  0   270 259  ; R0[K14(="d")] := K3(=1)
+[23] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[24] settable  0   271 259  ; R0[K15(="e")] := K3(=1)
+[25] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[26] settable  0   267 272  ; R0[K11(="a")] := K16(=nil)
+[27] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[28] settable  0   268 272  ; R0[K12(="b")] := K16(=nil)
+[29] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[30] settable  0   269 272  ; R0[K13(="c")] := K16(=nil)
+[31] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[32] settable  0   270 272  ; R0[K14(="d")] := K16(=nil)
+[33] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[34] settable  0   271 272  ; R0[K15(="e")] := K16(=nil)
+[35] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[36] settable  0   273 273  ; R0[K17(=9)] := K17(=9)
+[37] gettabup  0   0   258  ; R0 := U0(=_ENV)[K2(="t")]
+[38] settable  0   274 274  ; R0[K18(=12)] := K18(=12)
+[39] gettabup  0   0   256  ; R0 := U0(=_ENV)[K0(="print")]
+[40] gettabup  1   0   258  ; R1 := U0(=_ENV)[K2(="t")]
+[41] len       1   1        ; R1 := # R1
+[42] call      0   2   1    ;  := R0(R1)
+[43] gettabup  0   0   256  ; R0 := U0(=_ENV)[K0(="print")]
+[44] loadk     1   19       ; R1 := K19(="lua end")
+[45] call      0   2   1    ;  := R0(R1)
+[46] return    0   1        ; return 
+; end of function 0
+
